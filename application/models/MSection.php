@@ -1,5 +1,5 @@
 <?php
-class MSection extends CI_Models {
+class MSection extends CI_Model {
 
     public function __construct(){
 		parent::__construct();

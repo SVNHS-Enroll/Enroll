@@ -1,5 +1,5 @@
 <?php
-class MUser extends CI_Models {
+class MUser extends CI_Model {
 
     public function __construct(){
 		parent::__construct();

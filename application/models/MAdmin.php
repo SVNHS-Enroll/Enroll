@@ -1,5 +1,5 @@
 <?php
-class MAdmin extends CI_Models {
+class MAdmin extends CI_Model {
 
     public function __construct(){
 		parent::__construct();

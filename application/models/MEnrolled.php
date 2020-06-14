@@ -1,6 +1,6 @@
 <?php
 
-class MEnrolled extends CI_Models {
+class MEnrolled extends CI_Model {
 
     public function __construct(){
 		parent::__construct();

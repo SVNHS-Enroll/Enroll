@@ -1,6 +1,5 @@
 <?php
-
-class MApplication extends CI_Models {
+class MApplication extends CI_Model {
 
     public function __construct(){
 		parent::__construct();
