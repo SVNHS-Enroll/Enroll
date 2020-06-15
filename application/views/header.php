@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar stick-top navbar-expand-lg navbar-dark bg-primary">
     <a class="navbar-brand" href="#">
         <img src="<?= base_url()?>images/SVNHSLogo.png" width="50" height="50" alt="">
     </a>
@@ -38,6 +38,17 @@
                     <a class="dropdown-item" href="#">History</a>
                     <a class="dropdown-item" href="#">Signal Hymn</a>
                 </div>
+            </li>
+        </ul>
+        <ul class="navbar-nav navbar-right">
+            <li class="nav-item">
+                <a class="nav-link" href="<?php base_url();?>">Login<span class="sr-only"></span></a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">|<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php base_url();?>">Sign Up<span class="sr-only"></span></a>
             </li>
         </ul>
     </div>
