@@ -14,7 +14,7 @@ class MAdmin extends CI_Model {
         $q = $this->db->get('tbl_admin');
         if ($q->num_rows() > 0) {
             $row = $q->row_array();
-            $_SESSION['admin_id'] = $row['admin_id'];
+            $_SESSION['admin_ID'] = $row['admin_ID'];
             $_SESSION['admin_username'] = $row['admin_username'];
         }else {
             $this->session->set_flashdata('error', 'Sorry, username or password is incorrect!');

@@ -1,6 +1,13 @@
 <div class="container">
     <div class="row mt-5">
         <div class="col-md-6">
+            <?php 
+                if ($this->session->flashdata('error')) {
+                    echo "<div class='message'>";
+                    echo $this->session->flashdata('error');
+                    echo "</div>";
+                }
+            ?>
                 <div class="form-group" style="padding-bottom: 2em">
                     <img src="../images/computer.png" alt="monitor" style="display:block; margin: auto; width:200px;"><br>
                     <h6 style="text-align: center; font-family: Oswald; font-size: 15px; color: #2699FB">Create account</h6>
@@ -15,7 +22,7 @@
                 </div>
         </div>
         <div class="col-md-6">
-            <form action="welcome/register" method="post">
+            <form action="<?php echo site_url();?>welcome/register" method="post">
                 <div class="form-group">
                     <h6 style="font-family: GothicBold; font-size: 15px; font-weight: bolder; color: #2699FB">FIRSTNAME</h6>
                     <input type="text" name="fname" id="fname" class="form-control" style="width: 70%">

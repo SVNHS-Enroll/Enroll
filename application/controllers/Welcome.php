@@ -2,7 +2,7 @@
 class Welcome extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
-		
+		session_start();
 	}
 
 	function index() {
@@ -14,11 +14,18 @@ class Welcome extends CI_Controller {
 	}
 
 	function login() {
+		if ($this->input->post('username')) {
+			$u = $this->input->post('username');
+			$pw = $this->input->post('password');
+			$this->MAdmin->verifyAdmin($u, $pw);
+			if ($_SESSION['admin_ID'] > 0) {
+				redirect('admin/dashboard', 'refresh');
+			}
+		}
 		$data['title'] = "Log In | SVNHS Enroll";
 		$data['main'] = 'login';
-
 		$this->load->vars($data);
-		$this->load->view('template');
+		$this->load->view('template', $data);
 	}
 
 	function sign_up() {
@@ -27,19 +34,6 @@ class Welcome extends CI_Controller {
 
 		$this->load->vars($data);
 		$this->load->view('template');
-	}
-
-	function verify() {
-		if ($this->input->post('username')) {
-			$u = $this->input->post('username');
-			$pw = $this->input->post('password');
-			$this->MAdmin->verifyUser($u, $pw);
-			if ($_SESSION['user_id'] > 0) {
-				redirect('student/dashboard', 'refresh');
-			}
-		}
-		$data['main'] = 'login';
-		$data['title'] = 'Log In | SVNHS Enroll';
 	}
 
 	function about_us() {
