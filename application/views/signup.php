@@ -4,18 +4,17 @@
             <form class="horizontal" action="welcome/login" method="post">
                 <div class="form-group">
                     <label for="username">USERNAME</label><br>
-                    <input type="text" class="form-control col-5" name="username" id="username">
+                    <input type="text" class="form-control" name="username" id="username">
                 </div>
                 <div class="form-group">
                     <label for="password">PASSWORD</label><br>
-                    <input type="password" class="form-control col-5" name="password" id="password">
+                    <input type="password" class="form-control" name="password" id="password">
                 </div>
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" name="remember" id="remember">
                     <label class="form-check-label" for="remember">Remember Me?</label>
                 </div>
                 <div class="form-group">
-                <br>
                 <input class="btn btn-primary" type="button" value="Login">
                 </div>
             </form>

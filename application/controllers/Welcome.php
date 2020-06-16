@@ -13,20 +13,20 @@ class Welcome extends CI_Controller {
 		$this->load->view('template');
 	}
 
-	function application() {
+	function login() {
+		$data['title'] = "Log In | SVNHS Enroll";
+		$data['main'] = 'home';
 
+		$this->load->vars($data);
+		$this->load->view('template');
 	}
 
-	function enroll() {
+	function sign_up() {
+		$data['title'] = "Register | SVNHS Enroll";
+		$data['main'] = 'signup';
 
-	}
-
-	function user() {
-
-	}
-
-	function admin() {
-
+		$this->load->vars($data);
+		$this->load->view('template');
 	}
 
 	function about_us() {
