@@ -42,13 +42,13 @@
         </ul>
         <ul class="navbar-nav navbar-right">
             <li class="nav-item">
-                <a class="nav-link" href="<?php base_url();?>">Login<span class="sr-only"></span></a> 
+                <a class="nav-link" href="<?php base_url();?>login">Login<span class="sr-only"></span></a> 
             </li>
             <li class="nav-item">
                 <a class="nav-link">|<span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php base_url();?>">Sign Up<span class="sr-only"></span></a>
+                <a class="nav-link" href="<?php base_url();?>sign_up">Sign Up<span class="sr-only"></span></a>
             </li>
         </ul>
     </div>

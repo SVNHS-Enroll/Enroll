@@ -3,11 +3,11 @@
         <div class="col-md-6">
             <form class="horizontal" action="welcome/login" method="post">
                 <div class="form-group">
-                    <label for="username">USERNAME</label><br>
+                    <label style="font-family: GothicBold; font-size: 15px; font-weight: bolder; color: #2699FB" for="username">USERNAME</label><br>
                     <input type="text" class="form-control col-5" name="username" id="username">
                 </div>
                 <div class="form-group">
-                    <label for="password">PASSWORD</label><br>
+                    <label style="font-family: GothicBold; font-size: 15px; font-weight: bolder; color: #2699FB" for="password">PASSWORD</label><br>
                     <input type="password" class="form-control col-5" name="password" id="password">
                 </div>
                 <div class="form-check">

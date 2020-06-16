@@ -1,0 +1,16 @@
+@font-face {
+    font-family: Century Gothic;
+    src: url(../css/gothic.ttf);
+}
+
+@font-face {
+    font-family: GothicBold;
+    src: url(../css/gothicbold.ttf);
+    font-weight: bold;
+}
+
+
+
+body {
+    font-family: Century Gothic;
+}
