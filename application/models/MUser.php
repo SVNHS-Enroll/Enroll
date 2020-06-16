@@ -38,6 +38,7 @@ class MUser extends CI_Model {
     function addUser() {
         $data = array(
             'stud_ID' => $_SESSION['last_id'],
+            'user_email' => $_POST['email'],
             'user_name' => $_POST['username'],
             'user_password' => $_POST['password']
         );
