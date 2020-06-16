@@ -6,6 +6,21 @@ class MAdmin extends CI_Model {
         //session_start();
     }
 
+    function verifyAdmin($u, $pw) {
+        $this->db->select('admin_ID, admin_username');
+        $this->db->where('admin_username', $u);
+        $this->db->where('admin_password', $pw);
+        $this->db->limit(1);
+        $q = $this->db->get('tbl_admin');
+        if ($q->num_rows() > 0) {
+            $row = $q->row_array();
+            $_SESSION['admin_id'] = $row['admin_id'];
+            $_SESSION['admin_username'] = $row['admin_username'];
+        }else {
+            $this->session->set_flashdata('error', 'Sorry, username or password is incorrect!');
+        }
+    }
+
     function getAdmin($id) {
         $data = array();
         $options = array('admin_ID' => $id);

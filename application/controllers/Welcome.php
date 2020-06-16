@@ -29,6 +29,19 @@ class Welcome extends CI_Controller {
 		$this->load->view('template');
 	}
 
+	function verify() {
+		if ($this->input->post('username')) {
+			$u = $this->input->post('username');
+			$pw = $this->input->post('password');
+			$this->MAdmin->verifyUser($u, $pw);
+			if ($_SESSION['user_id'] > 0) {
+				redirect('student/dashboard', 'refresh');
+			}
+		}
+		$data['main'] = 'login';
+		$data['title'] = 'Log In | SVNHS Enroll';
+	}
+
 	function about_us() {
 
 	}
@@ -36,6 +49,7 @@ class Welcome extends CI_Controller {
 	function contact() {
 
 	}
+
 
 	
 }

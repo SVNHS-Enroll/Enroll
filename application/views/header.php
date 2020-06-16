@@ -9,6 +9,9 @@
                 <a class="nav-link" href="<?php base_url();?>">Home<span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="<?php base_url();?>">Admin Portal</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="<?php base_url();?>">SHS Admission</a>
             </li>
             <li class="nav-item dropdown">
