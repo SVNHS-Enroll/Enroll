@@ -1,27 +1,45 @@
 <div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img class="d-block w-100" src="/images/Slide1.png" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                    <img class="d-block w-100" src="/images/Slide2.png" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                    <img class="d-block w-100" src="/images/Slide3.png" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
     <div class="row mt-5">
         <div class="col-md-6">
-            <form class="horizontal" action="welcome/login" method="post">
-                <div class="form-group">
-                    <label style="font-family: GothicBold; font-size: 15px; font-weight: bolder; color: #2699FB" for="username">USERNAME</label><br>
-                    <input type="text" class="form-control col-5" name="username" id="username">
-                </div>
-                <div class="form-group">
-                    <label style="font-family: GothicBold; font-size: 15px; font-weight: bolder; color: #2699FB" for="password">PASSWORD</label><br>
-                    <input type="password" class="form-control col-5" name="password" id="password">
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" name="remember" id="remember">
-                    <label class="form-check-label" for="remember">Remember Me?</label>
-                </div>
-                <div class="form-group">
-                <br>
-                <input class="btn btn-primary" type="button" value="Login">
-                </div>
-            </form>
+            
         </div>
         <div class="col-md-6">
-            <img src="/images/student.png" alt="student" style="display:block; margin: auto; width:250px;">
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+        
         </div>
     </div>
 </div>

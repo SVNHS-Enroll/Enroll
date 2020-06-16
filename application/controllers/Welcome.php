@@ -15,7 +15,7 @@ class Welcome extends CI_Controller {
 
 	function login() {
 		$data['title'] = "Log In | SVNHS Enroll";
-		$data['main'] = 'home';
+		$data['main'] = 'login';
 
 		$this->load->vars($data);
 		$this->load->view('template');

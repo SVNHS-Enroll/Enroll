@@ -61,8 +61,8 @@
                     <h6 style="font-family: GothicBold; font-size: 15px; font-weight: bolder; color: #2699FB">ADDRESS</h6>
                     <input type="text" name="schoAdd" id="schoAdd" class="form-control" style="width: 70%">
                 </div>
-                <div class="form-group">
-                    <input type="submit" value="SIGN UP" class="btn btn-primary" style="margin-left: 5em; font-family: Arial; font-weight: bold; font-size: 18px; padding: 10px 25px;">
+                <div class="form-group centered">
+                    <input type="submit" value="NEXT" class="btn btn-primary" style="margin-left: 5em; font-family: Arial; font-weight: bold; font-size: 18px; padding: 10px 25px;">
                 </div>
             </form>
         </div>
