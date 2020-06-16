@@ -4,8 +4,8 @@ class Dashboard extends CI_Controller {
     public function __construct(){
 		parent::__construct();
         session_start();
-        if ($_SESSION['admin_id'] < 1) {
-            redirect('welcome/verify', 'refresh');
+        if ($_SESSION['admin_ID'] < 1) {
+            redirect('welcome/login', 'refresh');
         }
     }
     
@@ -17,10 +17,10 @@ class Dashboard extends CI_Controller {
     }
 
     function logout() {
-        unset($_SESSION['user_id']);
-        unset($_SESSION['username']);
+        unset($_SESSION['admin_ID']);
+        unset($_SESSION['admin_username']);
         $this->session->set_flashdata('error', "You've been logged out!");
-        redirect('welcome/verify', 'refresh');
+        redirect('welcome/login', 'refresh');
     }
 }
 
