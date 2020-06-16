@@ -3,7 +3,9 @@ class Dashboard extends CI_Controller {
     
     public function __construct(){
 		parent::__construct();
-        session_start();
+        if(!isset($_SESSION)) {
+			session_start(); 
+		} 
         if ($_SESSION['admin_ID'] < 1) {
             redirect('welcome/login', 'refresh');
         }

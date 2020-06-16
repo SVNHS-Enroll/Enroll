@@ -51,7 +51,7 @@
                 <a class="nav-link">|<span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?=site_url('welcome/sign_up')?>">Sign Up<span class="sr-only"></span></a>
+                <a class="nav-link" href="<?=site_url('welcome/register')?>">Sign Up<span class="sr-only"></span></a>
             </li>
         </ul>
     </div>

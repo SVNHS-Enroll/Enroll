@@ -2,7 +2,9 @@
 class Welcome extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
-		session_start();
+		if(!isset($_SESSION)) {
+			session_start(); 
+		}
 	}
 
 	function index() {
@@ -28,12 +30,32 @@ class Welcome extends CI_Controller {
 		$this->load->view('template', $data);
 	}
 
-	function sign_up() {
-		$data['title'] = "Register | SVNHS Enroll";
-		$data['main'] = 'signup';
+	function register() {
+		if ($this->input->post('fname')) {
+			$this->MStudent->addStudent();
+			redirect('welcome/sign_up', 'refresh');
+		}else {
+			$data['title'] = "Register | SVNHS Enroll";
+			$data['main'] = 'signup';
 
-		$this->load->vars($data);
-		$this->load->view('template');
+			$this->load->vars($data);
+			$this->load->view('template');
+		}
+		
+	}
+
+	function sign_up() {
+		if ($this->input->post('username')) {
+			$this->MUser->addUser();
+			redirect('welcome/login', 'refresh');
+		}else {
+			$data['title'] = "Register | SVNHS Enroll";
+			$data['main'] = 'signup2';
+
+			$this->load->vars($data);
+			$this->load->view('template');
+		}
+		
 	}
 
 	function about_us() {

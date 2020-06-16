@@ -30,11 +30,16 @@ class MUser extends CI_Model {
         return $data;
     }
 
+    function getLastID() {
+        $id = $this->db->insert_id();
+        return $this->db->insert_id();
+    }
+
     function addUser() {
         $data = array(
-            'stud_ID' => $_POST['stud_ID'],
-            'user_name' => $_POST['user_name'],
-            'user_password' => $_POST['user_password']
+            'stud_ID' => $_SESSION['last_id'],
+            'user_name' => $_POST['username'],
+            'user_password' => $_POST['password']
         );
 
         $this->db->insert('tbl_user', $data);

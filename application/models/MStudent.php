@@ -32,18 +32,21 @@ class MStudent extends CI_Model {
 
     function addStudent() {
         $data = array(
-            'stud_firstname' => $_POST['firstname'],
-            'stud_middlename' => $_POST['middlename'],
-            'stud_lastname' => $_POST['lastname'],
-            'stud_gender' => $_POST['gender'],
-            'stud_age' => $_POST['age'],
-            'stud_birthdate' => $_POST['birthdate'],
-            'stud_address' => $_POST['address'],
-            'stud_contactnum' => $_POST['contact'],
-            'stud_email' => $_POST['email']
+            'stud_firstname' => $_POST['fname'],
+            'stud_middlename' => $_POST['mname'],
+            'stud_lastname' => $_POST['lname'],
+            'stud_birthdate' => $_POST['bday'],
+            'stud_gender' => $_POST['sex'],
+            'stud_address' => $_POST['haddress'],
+            'stud_parentname' => $_POST['parent'],
+            'stud_parentocc' => $_POST['occupation'],
+            'stud_contactnum' => $_POST['phone'],
+            'stud_lastschool' => $_POST['school'],
+            'stud_schooladd' => $_POST['schoAdd'],
         );
 
         $this->db->insert('tbl_students', $data);
+        $_SESSION['last_id'] = $this->db->insert_id();
     }
 
     function editStudent() {
