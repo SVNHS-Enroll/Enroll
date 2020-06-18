@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row mt-5">
         <div class="col-md-6">
-            <form action="<?php echo site_url();?>welcome/login" method="post">
+            <form action="<?php echo site_url();?>welcome/admin_login" method="post">
                 <div class="form-group">
                     <label style="font-family: GothicBold; font-size: 15px; font-weight: bolder; color: #2699FB" for="username">USERNAME</label><br>
                     <input type="text" class="form-control col-5" name="username" id="username">
