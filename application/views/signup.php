@@ -41,8 +41,8 @@
                 </div>
                 <div class="form-group">
                     <h6 style="font-family: GothicBold; font-size: 15px; font-weight: bolder; color: #2699FB">SEX</h6>
-                    <label color="#2699FB" style="margin-left: 3em"><input type="radio" name="sex" id="sex" class="form-check-input">Male</label>
-                    <label color="#2699FB" style="margin-left: 3em"><input type="radio" name="sex" id="sex" class="form-check-input">Female</label>
+                    <label color="#2699FB" style="margin-left: 3em"><input type="radio" name="sex" id="sex" value="Male" class="form-check-input">Male</label>
+                    <label color="#2699FB" style="margin-left: 3em"><input type="radio" name="sex" id="sex" value="Female" class="form-check-input">Female</label>
                 </div>
                 <div class="form-group">
                     <h6 style="font-family: GothicBold; font-size: 15px; font-weight: bolder; color: #2699FB">HOME ADDRESS</h6>

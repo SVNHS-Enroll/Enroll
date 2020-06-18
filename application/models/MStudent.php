@@ -7,6 +7,21 @@ class MStudent extends CI_Model {
         //session_start();
     }
 
+    function verifyStudent($u, $pw) {
+        $this->db->select('user_ID, stud_ID, user_name');
+        $this->db->where('user_name', $u);
+        $this->db->where('user_password', $pw);
+        $this->db->limit(1);
+        $q = $this->db->get('tbl_user');
+        if ($q->num_rows() > 0) {
+            $row = $q->row_array();
+            $_SESSION['user_ID'] = $row['user_ID'];
+            $_SESSION['user_name'] = $row['user_name'];
+        }else {
+            $this->session->set_flashdata('error', 'Sorry, username or password is incorrect!');
+        }
+    }
+
     function getStudentID($id) {
         $data = array();
         $options = array('stud_ID' => $id);

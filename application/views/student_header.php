@@ -9,9 +9,6 @@
                 <a class="nav-link" href="<?php base_url();?>">Home<span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php site_url();?>/welcome/admin_login">Admin Portal</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="<?php base_url();?>">SHS Admission</a>
             </li>
             <li class="nav-item dropdown">
@@ -45,13 +42,7 @@
         </ul>
         <ul class="navbar-nav navbar-right">
             <li class="nav-item">
-                <a class="nav-link" href="<?=site_url('welcome/login')?>">Login<span class="sr-only"></span></a> 
-            </li>
-            <li class="nav-item">
-                <a class="nav-link">|<span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?=site_url('welcome/register')?>">Sign Up<span class="sr-only"></span></a>
+                <a class="nav-link" href="<?=site_url('student/sdashboard/logout')?>">Log Out<span class="sr-only"></span></a> 
             </li>
         </ul>
     </div>

@@ -19,13 +19,28 @@ class Welcome extends CI_Controller {
 		if ($this->input->post('username')) {
 			$u = $this->input->post('username');
 			$pw = $this->input->post('password');
+			$this->MStudent->verifyStudent($u, $pw);
+			if ($_SESSION['user_ID'] > 0) {
+				redirect('student/sdashboard', 'refresh');
+			}
+		}
+		$data['title'] = "Log In | SVNHS Enroll";
+		$data['main'] = 'login';
+		$this->load->vars($data);
+		$this->load->view('template', $data);
+	}
+
+	function admin_login() {
+		if ($this->input->post('username')) {
+			$u = $this->input->post('username');
+			$pw = $this->input->post('password');
 			$this->MAdmin->verifyAdmin($u, $pw);
 			if ($_SESSION['admin_ID'] > 0) {
 				redirect('admin/dashboard', 'refresh');
 			}
 		}
-		$data['title'] = "Log In | SVNHS Enroll";
-		$data['main'] = 'login';
+		$data['title'] = "Admin Log In | SVNHS Enroll";
+		$data['main'] = 'admin_login';
 		$this->load->vars($data);
 		$this->load->view('template', $data);
 	}
