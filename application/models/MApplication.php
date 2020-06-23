@@ -29,13 +29,28 @@ class MApplication extends CI_Model {
         return $data;
     }
 
+    function getAllStudentApplication() {
+        $data = array();
+        $q = $this->db->get('tbl_application');
+        if ($q-> num_rows() > 0){
+            foreach ($q->result_array() as $row){
+                $data[] = $row;
+            }
+        }
+        $q->free_result();
+        return $data;
+    }
+
+
+
     function addApplication() {
         $data=array(
-            'stud_ID' => $_POST['stud_ID'],
+            'stud_ID' => $_SESSION['stud_ID'],
             'appli_LRN' => $_POST['appli_LRN'],
             'appli_yearlevel' => $_POST['appli_yearlevel'],
             'appli_strand' => $_POST['appli_strand'],
-            'appli_status' => $_POST['appli_status']
+            'appli_date' => date('Y-m-d'),
+            'appli_status' => 'Unconfirmed'
         );
         $this->db->insert('tbl_application', $data);
     }
