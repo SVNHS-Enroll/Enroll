@@ -12,6 +12,8 @@ class SDashboard extends CI_Controller {
     }
     
     function index() {
+        $student = $this->MStudent->getStudent($_SESSION['stud_ID']);
+        $data['student'] = $student;
         $data['title'] = "Student Dashboard | SVNHS Enroll";
         $data['main'] = 'student_home';
         $this->load->vars($data);

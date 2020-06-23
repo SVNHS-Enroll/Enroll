@@ -16,18 +16,27 @@ class MStudent extends CI_Model {
         if ($q->num_rows() > 0) {
             $row = $q->row_array();
             $_SESSION['user_ID'] = $row['user_ID'];
+            $_SESSION['stud_ID'] = $row['stud_ID'];
             $_SESSION['user_name'] = $row['user_name'];
         }else {
             $this->session->set_flashdata('error', 'Sorry, username or password is incorrect!');
         }
     }
 
-    function getStudentID($id) {
+    function getStudent($id) {
         $data = array();
-        $options = array('stud_ID' => $id);
-        $q = $this->db->get_where('tbl_students', $options, 1);
+        $this->db->select('stud_firstname, stud_lastname, stud_status');
+        $this->db->where('stud_ID', $id);
+        $q = $this->db->get('tbl_students');
         if ($q->num_rows() > 0) {
-            $data = $q->row_array();
+            foreach ($q->result_array() as $row) {
+                $data = array(
+                    'stud_firstname' => $row['stud_firstname'],
+                    'stud_lastname' =>$row['stud_lastname'],
+                    'stud_status' =>$row['stud_status']
+                );
+            }
+            
         }
         $q -> free_result();
         return $data;
@@ -58,6 +67,7 @@ class MStudent extends CI_Model {
             'stud_contactnum' => $_POST['phone'],
             'stud_lastschool' => $_POST['school'],
             'stud_schooladd' => $_POST['schoAdd'],
+            'status' => 'Unenrolled'
         );
 
         $this->db->insert('tbl_students', $data);
